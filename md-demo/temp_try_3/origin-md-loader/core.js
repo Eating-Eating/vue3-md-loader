@@ -127,7 +127,6 @@ module.exports = function(source) {
   let pageScript = '';
   if (componenetsString) {
     pageScript = `<script>
-      import * as Vue from 'vue'
       export default {
         name: 'component-doc',
         components: {

@@ -1,4 +1,4 @@
-const {compileTemplate} = require('@vue/compiler-sfc');
+// const {compileTemplate} = require('@vue/compiler-sfc');
 
 
 function stripScript(content) {

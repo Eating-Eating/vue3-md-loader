@@ -1,14 +1,14 @@
 <template>
   <div>
-    <sajkdb />
+    <sample />
   </div>
 </template>
 <script>
 import { defineComponent } from 'vue';
-import sajkdb from './sajkdb.zh-CN.md';
+import sample from './sample.zh-CN.md';
 export default defineComponent({
   components: {
-    sajkdb,
+    sample
   },
   data() {
     return {

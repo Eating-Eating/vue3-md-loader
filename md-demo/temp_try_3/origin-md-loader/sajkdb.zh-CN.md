@@ -9,7 +9,7 @@
 :::demo 你可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。
 
 ```html
-  <a-button class="asfa">{{asdasf}}</a-button>
+  <eating-button class="asfa">{{asdasf}}</eating-button>
   <script>
     export default{
       data(){

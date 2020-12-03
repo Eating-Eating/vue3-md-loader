@@ -179,7 +179,7 @@ module.exports = function(source) {
   let content = parser.render(source);
   // console.log('content', JSON.stringify(content));
   let result = renderVueTemplate(content, opts.wrapper);
-  // console.log('tag', result);
+  console.log('tag', result);
   if (opts.raw) {
     return result;
   } else {

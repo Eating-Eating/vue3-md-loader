@@ -3,7 +3,7 @@ const VueLoaderPlugin = require('vue-loader/dist/plugin').default;
 const WebpackBar = require('webpackbar');
 const path = require('path');
 
-export default{
+module.exports = {
   mode:"development",
   entry: {
     app: './examples/index.js',
@@ -17,7 +17,7 @@ export default{
       },
       {
         test: /\.(en-US.md|zh-CN.md)$/,
-        use: ['vue-loader', { loader: path.resolve(__dirname, './origin-md-loader/core.js'),options:{raw:true,preventExtract: false} }],
+        use: ['vue-loader', { loader: path.resolve(__dirname, './md-demo/temp_try_3/origin-md-loader/core.js'),options:{raw:true,preventExtract: false} }],
       }
     ],
   },
@@ -25,8 +25,14 @@ export default{
     historyApiFallback: true,
     hot: true,
     open: true,
+    port:8001
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval-cheap-module-source-map',  
+  resolve: {
+    alias: {
+      'vue': 'vue/dist/vue.esm-bundler.js'
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'examples/index.html',
